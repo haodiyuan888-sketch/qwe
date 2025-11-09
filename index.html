@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱心</title>
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: #000;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin: 0 auto;
+            color: pink;
+            font-size: 20px;
+            padding-right: 5px;
+            animation: mymove 2.5s infinite;
+            -webkit-animation: mymove 2.5s infinite;
+        }
+        @keyframes mymove {
+            50% { font-size: 40px; }
+        }
+        @-webkit-keyframes mymove {
+            50% { font-size: 40px; }
+        }
+        .middle {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .middle2 {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            font-family: "Arial", sans-serif;
+        }
+        span {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+<!-- 页面内容 -->
+<div class="middle">
+    <div class="container">
+
+        <img src="https://pic.imgdb.cn/item/642547f5a682492fcc15cd5d.gif" width="1000" height="650"/>
+        <source src="https://haodiyuan888-sketch.github.io/qwe/多远都要在一起.mp3" type="audio/mpeg">
+    </div>
+</div>
+
+<!-- JS to unmute and play the audio -->
+<script>
+    window.onload = function() {
+        var audio = document.getElementById('bgm');
+        audio.muted = false;  // 解除静音
+        audio.play();  // 播放音频
+    };
+</script>
+
+</body>
+</html>
